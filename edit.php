@@ -3,6 +3,7 @@
 <head>
     <title>Page Title</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
 <div class="container">
