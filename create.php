@@ -10,7 +10,7 @@
     <form id="contact" action="app/create.php" method="post">
         <h3>Create  Contact</h3>
         <fieldset>
-            <input placeholder="Full name" type="text" tabindex="1" name="name" required autofocus>
+            <input placeholder="Full name" type="text" tabindex="1" name="full_name" required autofocus>
         </fieldset>
         <fieldset>
             <input placeholder="Phone Number" type="tel" tabindex="3" name="phone_number" required>
