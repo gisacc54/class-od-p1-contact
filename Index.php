@@ -1,3 +1,6 @@
+<?php
+require 'app/view-contacts.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,15 +33,23 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><strong>1</strong></td>
-            <td>John Mwenda</td>
-            <td>+255753423252</td>
-            <td>john@dit.ac.tz</td>
-            <td>
-                <a href="Index.php">view</a>
-            </td>
-        </tr>
+        <?php
+        $i = 1;
+        foreach ($contacts as $contact){
+            ?>
+            <tr>
+                <td><?=$i?></td>
+                <td><?=$contact['name']?></td>
+                <td><?=$contact['phone_number']?></td>
+                <td><?=$contact['email']?></td>
+                <td>
+                    <a href="Index.php">view</a>
+                </td>
+            </tr>
+            <?php
+            $i++;
+        }
+        ?>
         </tbody>
     </table>
 </div>
