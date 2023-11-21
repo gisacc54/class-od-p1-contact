@@ -9,8 +9,11 @@ if (isset($_POST['submit'])){
     $website = $_POST['website'];
     $address = $_POST['address'];
 
+    $sql = "update contacts set name='$fullName',phone_number='$phoneNumber',email='$email',website='$website',address='$address' where id=".$id;
 
+    $stm = $conn->prepare($sql);
+    $stm->execute();
 
-}else{
-    print "Not submitted";
+    echo "Updated Successful";
+    header('location: ../');
 }
