@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-    <form id="contact" action="app/create.php" method="post">
+    <form id="contact" action="app/create-contact.php" method="post">
         <h3>Create  Contact</h3>
         <fieldset>
             <input placeholder="Full name" type="text" tabindex="1" name="full_name" required autofocus>
