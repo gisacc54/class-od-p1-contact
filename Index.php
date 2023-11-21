@@ -45,6 +45,7 @@ require 'app/view-contacts.php';
                 <td>
                     <a href="view.php?id=<?=$contact['id']?>">View</a>
                     <a href="edit.php?id=<?=$contact['id']?>">Edit</a>
+                    <a href="edit.php?id=<?=$contact['id']?>">Edit</a>
                 </td>
             </tr>
             <?php
