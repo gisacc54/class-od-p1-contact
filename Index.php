@@ -43,7 +43,7 @@ require 'app/view-contacts.php';
                 <td><?=$contact['phone_number']?></td>
                 <td><?=$contact['email']?></td>
                 <td>
-                    <a href="Index.php">view</a>
+                    <a href="view.php?id=<?=$contact['id']?>">view</a>
                 </td>
             </tr>
             <?php

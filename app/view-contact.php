@@ -1,9 +1,10 @@
 <?php
 
 
-require "../db/db.php";
+require "db/db.php";
 
-if ($_GET["id"]){
+$results =[];
+if (isset($_GET["id"])){
     $contactId = $_GET['id'];
     $sql = "Select * from contacts where id = $contactId";
 
