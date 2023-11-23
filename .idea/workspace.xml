@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1210898-11ef-4408-b763-d6e95fdaa395" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e/storage_v2/_src_/schema/contactDb.vqR-5w.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e/storage_v2/_src_/schema/contactDb.vqR-5w.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/edit-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/edit-contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/delete-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/delete-contact.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +33,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php@8.0/8.0.30/bin/php" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2YOm13o5XNAJwzcY4KBVRMpIYDz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "update-e",
+    "git-widget-placeholder": "delete-s",
     "last_opened_file_path": "/Users/gisacc54/Project/class/crud/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
