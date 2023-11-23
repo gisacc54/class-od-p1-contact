@@ -5,14 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1210898-11ef-4408-b763-d6e95fdaa395" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e/storage_v2/_src_/schema/contactDb.vqR-5w.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5bfe8e3f-7257-4a9e-9b7d-d9e770f61c1e/storage_v2/_src_/schema/contactDb.vqR-5w.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/add-button.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/button.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/close.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/del.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/edit.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/footer.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/header.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/msg-error.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/msg-ok.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/pagging.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/tab.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/images/th.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partials/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partials/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/delete-contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/delete-contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +60,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "delete-s",
-    "last_opened_file_path": "/Users/gisacc54/Project/class/crud/images",
+    "git-widget-placeholder": "new-ui",
+    "last_opened_file_path": "/Users/gisacc54/Project/class/crud",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -66,8 +79,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

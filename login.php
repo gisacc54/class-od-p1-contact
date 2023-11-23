@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html >
 <head>
     <title>SpringTime</title>
@@ -33,34 +33,26 @@
                 <div class="box" style="width: 400px">
                     <!-- Box Head -->
                     <div class="box-head">
-                        <h2>Register</h2>
+                        <h2>Login</h2>
                     </div>
                     <!-- End Box Head -->
                     <form action="#" method="post">
                         <!-- Form -->
                         <div class="form">
                             <p>
-                                <label>Full Name </label>
-                                <input type="text" class="field size4" name="full_name" placeholder="Enter Full Name" />
-                            </p>
-                            <p>
-                                <label>Phone Number </label>
+                                <label>Phone Number <span>(Required Field)</span></label>
                                 <input type="text" class="field size4" name="phone_number" placeholder="Enter Phone Number"/>
                             </p>
                             <p>
-                                <label>Password </label>
+                                <label>Password <span>(Required Field)</span></label>
                                 <input type="password" class="field size4" name="password" placeholder="Enter Password" />
-                            </p>
-                            <p>
-                                <label>Confirm Password </label>
-                                <input type="password" class="field size4" name="confirm_password" placeholder="Enter Confirm Password"/>
                             </p>
                         </div>
                         <!-- End Form -->
                         <!-- Form Buttons -->
                         <div class="buttons">
-                            <a href="login.php" class="button">Back to Login</a>
-                            <input type="submit" class="button" value="Register" name="submit"/>
+                            <a href="register.php" class="button">Register Now</a>
+                            <input type="submit" class="button" value="Login" />
                         </div>
                         <!-- End Form Buttons -->
                     </form>
