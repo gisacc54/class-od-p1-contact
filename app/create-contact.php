@@ -7,15 +7,18 @@ if (isset($_POST['submit'])){
     $email = $_POST['email'];
     $website = $_POST['website'];
     $address = $_POST['address'];
+    $userId = $_POST['user_id'];
 
     try {
-        $sql = "insert into contacts (name,phone_number,email,website,address) values ('$fullName','$phoneNumber','$email','$website','$address')";
+        if ($fullName == '' || $phoneNumber == '' || $email == '' || $address == '' || $website == ''){
+            throw new PDOException("Fail");
+        }
+        $sql = "insert into contacts (name,phone_number,email,website,address,user_id) values ('$fullName','$phoneNumber','$email','$website','$address','$userId')";
         $conn->exec($sql);
-        echo "Contact created successful";
-        header('location: ../');
+        header('location: ../?success=Contact created successfully');
     }catch (PDOException $e){
-        echo "Error: ".$e->getMessage();
+       header('location: ../create.php?error=Fail to create contact');
     }
 }else{
-    print "Not submitted";
+    header('location: ../');
 }

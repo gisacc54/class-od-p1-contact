@@ -29,6 +29,7 @@
         <div id="main">
             <!-- Content -->
             <div id="container">
+                <?php include 'partials/response.php' ?>
                 <!-- Box -->
                 <div class="box" style="width: 400px">
                     <!-- Box Head -->
@@ -36,7 +37,7 @@
                         <h2>Register</h2>
                     </div>
                     <!-- End Box Head -->
-                    <form action="#" method="post">
+                    <form action="app/register.php" method="post">
                         <!-- Form -->
                         <div class="form">
                             <p>

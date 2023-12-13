@@ -1,3 +1,4 @@
+<?php include 'middleware/guest.php'?>
 <!DOCTYPE html>
 <html >
 <head>
@@ -29,6 +30,7 @@
         <div id="main">
             <!-- Content -->
             <div id="container">
+                <?php include 'partials/response.php' ?>
                 <!-- Box -->
                 <div class="box" style="width: 400px">
                     <!-- Box Head -->
@@ -36,15 +38,15 @@
                         <h2>Login</h2>
                     </div>
                     <!-- End Box Head -->
-                    <form action="#" method="post">
+                    <form action="app/login.php" method="post">
                         <!-- Form -->
                         <div class="form">
                             <p>
-                                <label>Phone Number <span>(Required Field)</span></label>
+                                <label>Phone Number </label>
                                 <input type="text" class="field size4" name="phone_number" placeholder="Enter Phone Number"/>
                             </p>
                             <p>
-                                <label>Password <span>(Required Field)</span></label>
+                                <label>Password </label>
                                 <input type="password" class="field size4" name="password" placeholder="Enter Password" />
                             </p>
                         </div>
@@ -52,7 +54,7 @@
                         <!-- Form Buttons -->
                         <div class="buttons">
                             <a href="register.php" class="button">Register Now</a>
-                            <input type="submit" class="button" value="Login" />
+                            <input type="submit" class="button" value="Login" name="submit" />
                         </div>
                         <!-- End Form Buttons -->
                     </form>

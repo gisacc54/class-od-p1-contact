@@ -15,5 +15,5 @@ if (isset($_POST['submit'])){
     $stm->execute();
 
     echo "Updated Successful";
-    header('location: ../');
+    header('location: ../?success=Contact updated successfully');
 }

@@ -1,9 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
+include 'middleware/auth.php';
+include 'app/view-contacts.php';
+?>
+<!DOCTYPE html>
+<html>
 <head>
 <title>SpringTime</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <style>
+        #footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .box-content{
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
 <!-- Header -->
@@ -13,29 +28,22 @@
 <div id="container">
   <div class="shell">
     <!-- Small Nav -->
-    <div class="small-nav"> <a href="#">Dashboard</a> <span>&gt;</span> Current Articles </div>
+    <div class="small-nav"> <a href="#">Dashboard</a> <span>&gt;</span> My Contacts </div>
     <!-- End Small Nav -->
-    <!-- Message OK -->
-    <div class="msg msg-ok">
-      <p><strong>Your file was uploaded succesifully!</strong></p>
-      <a href="#" class="close">close</a> </div>
-    <!-- End Message OK -->
-    <!-- Message Error -->
-    <div class="msg msg-error">
-      <p><strong>You must select a file to upload first!</strong></p>
-      <a href="#" class="close">close</a> </div>
-    <!-- End Message Error -->
+
     <br />
+      <?php include 'partials/response.php' ?>
     <!-- Main -->
     <div id="main">
       <div class="cl">&nbsp;</div>
       <!-- Content -->
       <div id="content">
+
         <!-- Box -->
         <div class="box">
           <!-- Box Head -->
           <div class="box-head">
-            <h2 class="left">Current Articles</h2>
+            <h2 class="left">My Contacts</h2>
             <div class="right">
               <label>search articles</label>
               <input type="text" class="field small-field" />
@@ -46,157 +54,73 @@
           <!-- Table -->
           <div class="table">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <thead>
               <tr>
-                <th width="13"><input type="checkbox" class="checkbox" /></th>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Added by</th>
-                <th width="110" class="ac">Content Control</th>
+                  <th width="13">SN</th>
+                  <th>Full Name</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th width="110" class="ac"> Action</th>
               </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr class="odd">
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr class="odd">
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr class="odd">
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
-              <tr class="odd">
-                <td><input type="checkbox" class="checkbox" /></td>
-                <td><h3><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></h3></td>
-                <td>12.05.09</td>
-                <td><a href="#">Administrator</a></td>
-                <td><a href="#" class="ico del">Delete</a><a href="#" class="ico edit">Edit</a></td>
-              </tr>
+              </thead>
+              <tbody>
+
+              <?php
+              $i = 1;
+              foreach ($contacts as $contact){
+                  ?>
+                  <tr>
+                      <td><?=$i?></td>
+                      <td><h3><a href="view.php?id=<?=$contact['id']?>"><?=$contact['name']?></a></h3></td>
+                      <td><?=$contact['phone_number']?></td>
+                      <td><?=$contact['email']?></td>
+                      <td>
+                          <a href="edit.php?id=<?=$contact['id']?>" class="ico edit">Edit</a>
+                          <a href="app/delete-contact.php?id=<?=$contact['id']?>" class="ico del">Delete</a>
+                      </td>
+                  </tr>
+                  <?php
+                  $i++;
+              }
+              if (!count($contacts)>0){
+                ?>
+                  <tr>
+                      <td colspan="5"><center class="ico ex">No data available in table</center></td>
+                  </tr>
+              <?php
+              }
+              ?>
+              </tbody>
             </table>
             <!-- Pagging -->
             <div class="pagging">
               <div class="left">Showing 1-12 of 44</div>
-              <div class="right"> <a href="#">Previous</a> <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">245</a> <span>...</span> <a href="#">Next</a> <a href="#">View all</a> </div>
+              <div class="right"> <a href="#">Previous</a> <a href="#">1</a>  <a href="#">Next</a> <a href="#">View all</a> </div>
             </div>
             <!-- End Pagging -->
           </div>
           <!-- Table -->
         </div>
         <!-- End Box -->
-        <!-- Box -->
-        <div class="box">
-          <!-- Box Head -->
-          <div class="box-head">
-            <h2>Add New Article</h2>
-          </div>
-          <!-- End Box Head -->
-          <form action="#" method="post">
-            <!-- Form -->
-            <div class="form">
-              <p> <span class="req">max 100 symbols</span>
-                <label>Article Title <span>(Required Field)</span></label>
-                <input type="text" class="field size1" />
-              </p>
-              <p class="inline-field">
-                <label>Date</label>
-                <select class="field size2">
-                  <option value="">23</option>
-                </select>
-                <select class="field size3">
-                  <option value="">July</option>
-                </select>
-                <select class="field size3">
-                  <option value="">2009</option>
-                </select>
-              </p>
-              <p> <span class="req">max 100 symbols</span>
-                <label>Content <span>(Required Field)</span></label>
-                <textarea class="field size1" rows="10" cols="30"></textarea>
-              </p>
-            </div>
-            <!-- End Form -->
-            <!-- Form Buttons -->
-            <div class="buttons">
-              <input type="button" class="button" value="preview" />
-              <input type="submit" class="button" value="submit" />
-            </div>
-            <!-- End Form Buttons -->
-          </form>
-        </div>
-        <!-- End Box -->
       </div>
       <!-- End Content -->
+      </div>
       <!-- Sidebar -->
       <div id="sidebar">
-        <!-- Box -->
-        <div class="box">
-          <!-- Box Head -->
-          <div class="box-head">
-            <h2>Management</h2>
+          <!-- Box -->
+          <div class="box">
+              <!-- Box Head -->
+              <div class="box-head">
+                  <h2>Management</h2>
+              </div>
+              <!-- End Box Head-->
+              <div class="box-content">
+                  <a href="create.php" class="add-button"><span>Add new Contact</span></a>
+              </div>
           </div>
-          <!-- End Box Head-->
-          <div class="box-content"> <a href="#" class="add-button"><span>Add new Article</span></a>
-            <div class="cl">&nbsp;</div>
-            <p class="select-all">
-              <input type="checkbox" class="checkbox" />
-              <label>select all</label>
-            </p>
-            <p><a href="#">Delete Selected</a></p>
-            <!-- Sort -->
-            <div class="sort">
-              <label>Sort by</label>
-              <select class="field">
-                <option value="">Title</option>
-              </select>
-              <select class="field">
-                <option value="">Date</option>
-              </select>
-              <select class="field">
-                <option value="">Author</option>
-              </select>
-            </div>
-            <!-- End Sort -->
-          </div>
-        </div>
-        <!-- End Box -->
+          <!-- End Box -->
       </div>
+      <!-- End Sidebar -->
       <!-- End Sidebar -->
       <div class="cl">&nbsp;</div>
     </div>

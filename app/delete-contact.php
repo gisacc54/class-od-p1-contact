@@ -9,6 +9,6 @@ if (isset($_GET["id"])) {
     $sql = "delete from contacts where id =".$contactId;
     $stm = $conn->prepare($sql);
     $stm->execute();
-    header('location: ../');
+    header('location: ../?success=Contact deleted successfully');
 
 }
