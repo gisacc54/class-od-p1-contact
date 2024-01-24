@@ -12,7 +12,6 @@ if (isset($_POST['submit'])){
         $stm->execute();
         $users = $stm->fetchAll(PDO::FETCH_ASSOC);
         if (!(count($users)>0)){
-            echo "1";
             throw new PDOException("Error");
         }
         $user = $users[0];
